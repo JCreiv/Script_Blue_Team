@@ -122,7 +122,7 @@ print_green "Login root por SSH deshabilitado."
 
 
 # Añadir regla de alerta ICMP a Snort
-echo 'alert icmp 92.119.141.208 any -> any any (msg:"ALERTA PINGAZO: Posible intrusión desde la IP de la escuela"; sid:1000001; rev:1;)' >> /etc/snort/rules/local.rules
+echo 'alert icmp any any -> any any (msg:"ALERTA PINGAZO: Ping detectado"; sid:1000001; rev:1;)' >> /etc/snort/rules/local.rules
 sudo systemctl restart snort
 print_green "Regla de alerta ICMP añadida a Snort."
 
